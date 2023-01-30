@@ -1,0 +1,1 @@
+const optionButtons = document.querySelectorAll
