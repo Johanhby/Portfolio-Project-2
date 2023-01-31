@@ -15,31 +15,63 @@ function getComputerChoise() {
     const randomNumber = Math.floor(Math.random() * 5);
     return choises[randomNumber];
 }
-console.log(getComputerChoise());
 
 function game(playerChoise) {
-    console.log("yes ok  " + playerChoise);
+    const computerChoise = getComputerChoise();
+    switch (playerChoise + computerChoise) {
+        case "#ro#sc":
+        case "#ro#li":
+        case "#pa#ro":
+        case "#pa#sp":
+        case "#sc#pa":
+        case "#sc#li":
+        case "#li#pa":
+        case "#li#sp":
+        case "#sp#sc":
+        case "#sp#ro":
+            console.log("Player Wins!");  
+            break;
+        case "#ro#pa":
+        case "#ro#sp":
+        case "#pa#li":
+        case "#pa#sc":
+        case "#sc#ro":
+        case "#sc#sp":
+        case "#li#sc":
+        case "#li#ro":
+        case "#sp#pa":
+        case "#sp#li":
+            console.log("Player loses!");
+            break;
+        case "#ro#ro":
+        case "#pa#pa":
+        case "#sc#sc":
+        case "#li#li":
+        case "#sp#sp":
+            console.log("It's a draw!")
+            break;                            
+    }
 }
 
 function main() {
     rock_button.addEventListener('click', function() {
-        game("ro")
+        game("#ro")
     })
 
     paper_button.addEventListener('click', function() {
-        game("pa")
+        game("#pa")
     })
 
     scissors_button.addEventListener('click', function() {
-        game("sc")
+        game("#sc")
     })
 
     lizard_button.addEventListener('click', function() {
-        game("li")
+        game("#li")
     })
 
     spock_button.addEventListener('click', function() {
-        game("sp")
+        game("#sp")
     })
 }
 
