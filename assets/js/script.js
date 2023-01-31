@@ -1,8 +1,10 @@
+
+// DOM cashe section.
+
 let playerScore = 0;
 let computerScore = 0;
 const playerScore_div = document.getElementById("player-score");
 const computerScore_div = document.getElementById("computer-score");
-const scoreBoard_div = document.querySelector(".score-board");
 const result_p = document.querySelector(".result > p");
 const rock_button = document.querySelector("#ro");
 const paper_button = document.querySelector("#pa");
@@ -10,11 +12,15 @@ const scissors_button = document.querySelector("#sc");
 const lizard_button = document.querySelector("#li");
 const spock_button = document.querySelector("#sp");
 
+//function to generate random number for the computer which translates into a "gesture button" in the game.
+
 function getComputerChoise() {
     const choises = ["#ro", "#pa", "#sc", "#li", "#sp"];
     const randomNumber = Math.floor(Math.random() * 5);
     return choises[randomNumber];
 }
+
+
 
 function convertToWord(letter) {
     if (letter === "#ro") return "Rock";
@@ -32,12 +38,15 @@ function win(playerChoise, computerChoise) {
     
 }
 
-function lose() {
-    console.log("LOST");
+function lose(playerChoise, computerChoise) {
+    computerScore++;
+    playerScore_div.innerHTML = playerScore;
+    computerScore_div.innerHTML = computerScore;
+    result_p.innerHTML = convertToWord(playerChoise) + " loses to " + convertToWord(computerChoise) + ". You lost.."
 }
 
-function draw() {
-    console.log("DRAW");
+function draw(playerChoise, computerChoise) {
+    result_p.innerHTML = convertToWord(playerChoise) + " equals " + convertToWord(computerChoise) + ". It's a draw.."
 }
 
 function game(playerChoise) {
