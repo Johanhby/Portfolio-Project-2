@@ -1,9 +1,9 @@
-const playerScore = 0;
-const computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 const playerScore_div = document.getElementById("player-score");
 const computerScore_div = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const rock_button = document.querySelector("#ro");
 const paper_button = document.querySelector("#pa");
 const scissors_button = document.querySelector("#sc");
@@ -14,6 +14,30 @@ function getComputerChoise() {
     const choises = ["#ro", "#pa", "#sc", "#li", "#sp"];
     const randomNumber = Math.floor(Math.random() * 5);
     return choises[randomNumber];
+}
+
+function convertToWord(letter) {
+    if (letter === "#ro") return "Rock";
+    if (letter === "#pa") return "Paper";
+    if (letter === "#sc") return "Scissors";
+    if (letter === "#li") return "Lizard";
+    return "Spock";
+}
+
+function win(playerChoise, computerChoise) {
+    playerScore++;
+    playerScore_div.innerHTML = playerScore;
+    computerScore_div.innerHTML = computerScore;
+    result_p.innerHTML = convertToWord(playerChoise) + " beats " + convertToWord(computerChoise) + ". You win!"
+    
+}
+
+function lose() {
+    console.log("LOST");
+}
+
+function draw() {
+    console.log("DRAW");
 }
 
 function game(playerChoise) {
@@ -29,7 +53,7 @@ function game(playerChoise) {
         case "#li#sp":
         case "#sp#sc":
         case "#sp#ro":
-            console.log("Player Wins!");  
+            win(playerChoise, computerChoise);  
             break;
         case "#ro#pa":
         case "#ro#sp":
@@ -41,14 +65,14 @@ function game(playerChoise) {
         case "#li#ro":
         case "#sp#pa":
         case "#sp#li":
-            console.log("Player loses!");
+            lose(playerChoise, computerChoise);
             break;
         case "#ro#ro":
         case "#pa#pa":
         case "#sc#sc":
         case "#li#li":
         case "#sp#sp":
-            console.log("It's a draw!")
+            draw(playerChoise, computerChoise);
             break;                            
     }
 }
