@@ -1,38 +1,6 @@
-const optionButtons = document.querySelectorAll('[data-option]')
-const OPTION = [
-    {
-        name: 'rock'
-        emoji: '(../images/rock.jpg)'
-        beats: 'scissors', 'lizard'
-    },
-    {
-        name: 'paper'
-        emoji: '(../images/paper.jpg)'
-        beats: 'rock', 'spock'
-    },
-    {
-        name: 'scissors'
-        emoji: '(../images/scissors.jpg)'
-        beats: 'paper', 'lizard'
-    },
-    {
-        name: 'lizard'
-        emoji: '(../images/lizard.jpg)'
-        beats: 'paper', 'spock'
-    },
-    {
-        name: 'spock'
-        emoji: '(../images/spock.jpg)'
-        beats: 'scissors', 'rock'
-    }
-]
-optionButtons.forEach(optionButtons => {
-    optionButtons.addEventListener('click', e => {
-        const optionName = optionButtons.dataset.option
-        makeOption(optionName)
-    })
-})
-
-function makeOption(option) {
-    console.log(option)
-}
+const playerScore = 0;
+const computerScore = 0;
+const playerScore_div = document.getElementById("player-score");
+const computerScore_div = document.getElementById("computer-score");
+const scoreBoard_div = document.querySelector(".score-board");
+const result_div = document.querySelector(".result");

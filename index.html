@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
     <title>Rock,Paper,Scissors,Lizard,Spock</title>
 </head>
 <body>
@@ -19,28 +20,32 @@
     
     <div class="game">
         <div class="hands">
-            <img class="player-hand handy" src="assets/images/hand-ready.png" alt="">
-            <img class="computer-hand handy" src="assets/images/hand-ready.png" alt="">
+            <img class="player-hand handy" src="assets/images/hand-ready.png" alt="The players hand, ready to start playing">
+            <img class="computer-hand handy" src="assets/images/hand-ready.png" alt="The computers hand, ready to start playing">
         </div>
         <h2 class="start">Choose an option</h2>
         <div class="options">
-            <button class="option" data-option="rock"><i class="fa-regular fa-hand-back-fist fa-2x"></i></button>
-            <button class="option" data-option="paper"><i class="fa-regular fa-hand fa-2x"></i></button>
-            <button class="option" data-option="scissors"><i class="fa-regular fa-hand-scissors fa-2x"></i></button>
-            <button class="option" data-option="lizard"><i class="fa-regular fa-hand-lizard fa-2x"></i></button>
-            <button class="option" data-option="spock"><i class="fa-regular fa-hand-spock fa-2x"></i></button>
+            <button class="option" id="ro"><i class="fa-regular fa-hand-back-fist fa-2x"></i></button>
+            <button class="option" id="pa"><i class="fa-regular fa-hand fa-2x"></i></button>
+            <button class="option" id="sc"><i class="fa-regular fa-hand-scissors fa-2x"></i></button>
+            <button class="option" id="li"><i class="fa-regular fa-hand-lizard fa-2x"></i></button>
+            <button class="option" id="sp"><i class="fa-regular fa-hand-spock fa-2x"></i></button>
         </div>
         
     </div>
 
-    <div class="score">
-        <div class="player-score">
+    <div class="result">
+        <p>Scissors cuts paper. You won!</p>
+    </div>
+
+    <div class="score-board">
+        <div>
             <h2>Player</h2>
-            <p>0</p>
+            <div id="player-score">0</div>
         </div>
-        <div class="computer-score">
+        <div>
             <h2>Computer</h2>
-            <p>0</p>
+            <div id="computer-score">0</div>
         </div>
     </div>
 
