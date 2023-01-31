@@ -10,6 +10,37 @@ const scissors_button = document.querySelector("#sc");
 const lizard_button = document.querySelector("#li");
 const spock_button = document.querySelector("#sp");
 
-rock_button.addEventListener('click', function() {
-    console.log("u click rock");
-})
+function getComputerChoise() {
+    const choises = ["#ro", "#pa", "#sc", "#li", "#sp"];
+    const randomNumber = Math.floor(Math.random() * 5);
+    return choises[randomNumber];
+}
+console.log(getComputerChoise());
+
+function game(playerChoise) {
+    console.log("yes ok  " + playerChoise);
+}
+
+function main() {
+    rock_button.addEventListener('click', function() {
+        game("ro")
+    })
+
+    paper_button.addEventListener('click', function() {
+        game("pa")
+    })
+
+    scissors_button.addEventListener('click', function() {
+        game("sc")
+    })
+
+    lizard_button.addEventListener('click', function() {
+        game("li")
+    })
+
+    spock_button.addEventListener('click', function() {
+        game("sp")
+    })
+}
+
+main();
