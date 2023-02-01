@@ -12,7 +12,7 @@ const scissors_button = document.querySelector("#sc");
 const lizard_button = document.querySelector("#li");
 const spock_button = document.querySelector("#sp");
 
-//function to generate random number for the computer which translates into a "gesture button" in the game.
+//function to generate random number for the computer which translates into a play option in the game.
 
 function getComputerChoise() {
     const choises = ["#ro", "#pa", "#sc", "#li", "#sp"];

@@ -24,9 +24,41 @@ Rock, Paper, Scissors, Lizard & Spock is a game of chance played in good fun wit
 ![Screenshot](/assets/images/Hero-image-readme.jpg)
 
 - There is a message encurraging the player to bush a button to begin the game. That message will change to display the outcome of each round of the game in text form.
+- Two hands "at the ready" are displayed. One is representing the player and the other the computer, setting a competitive mood.
 
 ![Screenshot](/assets/images/message-readme.jpg)
 
-- Two hands "at the ready" are displayed. One is representing the player and the other the computer, setting a competitive mood.
-- Five clickable buttons, each with a picture of the different game choises are present in the middle of the page. Each button will have its border turn green upon hovering the mouse over it.
+- Five clickable buttons, each with a picture of the different game choises are present in the middle of the page. Each button will have a click animation performed upon click, letting the player know they made a choise.
 - Finally a scoreboard is present beneith the game buttons, tallying the score of the player versus the computer. Each round awards the winner with 1 point, the loser of 0 and a draw will award no points to either side.
+
+![Screenshot](/assets/images/buttons-score-readme.jpg)
+
+### Features to implement
+
+- Account creation feature and an all time scoreboard featuring the luckiest players in games of 100 rounds.
+
+### Technologies
+
+5 game options exists in the form of buttons. Each choise has 2 winning scenarios, 2 losing scenarios and 1 draw. Which option will win/lose to which is covered in the Hero Image of the website but I will document it here aswell:
+- Rock:  
+  - Wins against: Scissors/Lizard
+  - Loses to: Paper/Spock
+- Paper:
+  - Wins against: Rock/Spock
+  - Loses to: Scissors/Lizard
+- Scissors:
+  - Wins against: Paper/Lizard
+  - Loses to: Rock/Spock
+- Lizard:
+  - Wins against: Spock/Paper
+  - Loses to: Scissors/Rock
+- Spock:
+  - Wins against: Scissors/Rock
+  - Loses to: Paper/Lizard
+- Draw: If the player and the computer chooses the same option it's a draw, awarding no points to either party.         
+
+
+### Credits
+
+- I thank the Youtube Channel "FreeCodeCamp.org" for it's well laid out video on Javascript pertaining to "Rock, Paper & Scissors", I learned alot watching your content.
+- Link: https://www.youtube.com/watch?v=jaVNP3nIAv0
