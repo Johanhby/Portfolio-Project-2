@@ -11,7 +11,7 @@ Rock, Paper, Scissors, Lizard & Spock is a game of chance played in good fun wit
 
 ## Features
 
-- A Hero image encouraging message to start playing, decorative opposing hands setting the competivite mood.
+- A descriptive Hero image.
 - An encouraging message to start playing.
 - Decorative opposing hands at the ready, setting the competivite mood.
 - 5 button choises to play the game.
@@ -20,9 +20,11 @@ Rock, Paper, Scissors, Lizard & Spock is a game of chance played in good fun wit
 ### Existing Features
 
 - A pentagon shaped Hero image which explains the actions and their potential outcome greets the user upon visiting the website.
+
 ![Screenshot](/assets/images/Hero-image-readme.jpg)
 
 - There is a message encurraging the player to bush a button to begin the game. That message will change to display the outcome of each round of the game in text form.
+
 ![Screenshot](/assets/images/message-readme.jpg)
 
 - Two hands "at the ready" are displayed. One is representing the player and the other the computer, setting a competitive mood.

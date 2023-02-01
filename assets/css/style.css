@@ -101,11 +101,20 @@ section h2 {
 
 /* Media queries */
 
+@media all and (min-width: 300px) {
+
+    .option {
+        width: 15%;
+        height: 50px;
+    }
+
+}
+
 @media all and (min-width: 414px) {
 
     .option {
-        width: 10%;
-        height: 40px;
+        width: 11.5%;
+        height: 50px;
     }
 
 }
