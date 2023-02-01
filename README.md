@@ -62,3 +62,22 @@ Rock, Paper, Scissors, Lizard & Spock is a game of chance played in good fun wit
 
 - I thank the Youtube Channel "FreeCodeCamp.org" for it's well laid out video on Javascript pertaining to "Rock, Paper & Scissors", I learned alot watching your content.
 - Link: https://www.youtube.com/watch?v=jaVNP3nIAv0
+
+### Code Validation
+
+- W3C HTML Validator Passed
+
+- W3C CSS Validator Passed (with minor insignificant errors)
+
+- JSHint Javascript Validator passed (with 2 minor insignificant errors)
+
+### Bugfixes
+- The switch statement "function game" in Javascript was initially missing the break; statements between each switch block to stop the execution of further code when an outcome had already been determined.
+
+### Supported Devices
+
+- The site was built from a "Mobile first" perspective. Design was made from a 285 pixel width and scaling up to any size device from there, accomodating even small smartphone sizes.
+
+### Deployment
+
+- Go to github.com, log in to your account and select the repository you want to deploy. Click on settings and scroll down to Gibhub Pages and select "main" as a source option. Once that is done you click "save" and the site will go live, it might take a few minutes for that to happen but it should.

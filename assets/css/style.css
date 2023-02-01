@@ -19,16 +19,17 @@ section {
     height: 100vh;
     font-family: 'Unbounded', cursive, sans-serif;
     color: rgb(0, 0, 0);
+    
 }
 
-section h1 {
+h1 {
     font-size: 0.9rem;
     text-align: center;
     padding-top: 0.5rem;
 }
 
-section h2 {
-    font-size: 0.8rem;
+h2 {
+    font-size: 1rem;
     text-align: center;
     padding-bottom: 1.25rem;
 }
@@ -41,10 +42,6 @@ section h2 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.score-board h2 {
-    font-size: 1rem;
 }
 
 .score-board div {
@@ -63,15 +60,12 @@ section h2 {
 /* game section */
 
 .options {
-    align-items: center;
     display: flex;
     justify-content: space-evenly;
-    position: relative;
     margin-top: 30px;
 }
 
 .hands {
-    align-items: center;
     display: flex;
     justify-content: space-evenly;
     position: relative;
@@ -96,11 +90,16 @@ section h2 {
    width: 10%;
 }
 
-.option:hover {
-    
-}
+/* Media queries to set button size scaling*/
 
-/* Media queries */
+@media all and (min-width: 250px) {
+
+    .option {
+        width: 17%;
+        height: 50px;
+    }
+
+}
 
 @media all and (min-width: 300px) {
 

@@ -1,5 +1,5 @@
 
-// DOM cashe section.
+// DOM cache section.
 
 let playerScore = 0;
 let computerScore = 0;
@@ -12,7 +12,7 @@ const scissors_button = document.querySelector("#sc");
 const lizard_button = document.querySelector("#li");
 const spock_button = document.querySelector("#sp");
 
-//function to generate random number for the computer which translates into a play option in the game.
+//function to generate random number for the computer which translates into a gameplay option selection.
 
 function getComputerChoise() {
     const choises = ["#ro", "#pa", "#sc", "#li", "#sp"];
@@ -20,7 +20,7 @@ function getComputerChoise() {
     return choises[randomNumber];
 }
 
-
+// function to translate gameplay choise to human readable text to inform user of his/her choise vs the computers choise of action.
 
 function convertToWord(letter) {
     if (letter === "#ro") return "Rock";
@@ -30,24 +30,34 @@ function convertToWord(letter) {
     return "Spock";
 }
 
+// function to increment the players score by 1 point if victorious in the previous round and add human readable text informing him/her of this.
+
 function win(playerChoise, computerChoise) {
     playerScore++;
     playerScore_div.innerHTML = playerScore;
     computerScore_div.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(playerChoise) + " beats " + convertToWord(computerChoise) + ". You win!"
+    result_p.innerHTML = convertToWord(playerChoise) + " beats " + convertToWord(computerChoise) + ". You win!";
     
 }
+
+// function to increment the computers score by 1 point if victorious in the previous round and add human readable text informing him/her of this.
 
 function lose(playerChoise, computerChoise) {
     computerScore++;
     playerScore_div.innerHTML = playerScore;
     computerScore_div.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(playerChoise) + " loses to " + convertToWord(computerChoise) + ". You lost.."
+    result_p.innerHTML = convertToWord(playerChoise) + " loses to " + convertToWord(computerChoise) + ". You lost..";
 }
 
+// function to inform the player that they and the computer chose the same game option and the outcome became a draw, awarding 0 point to either party.
+
 function draw(playerChoise, computerChoise) {
-    result_p.innerHTML = convertToWord(playerChoise) + " equals " + convertToWord(computerChoise) + ". It's a draw.."
+    result_p.innerHTML = convertToWord(playerChoise) + " equals " + convertToWord(computerChoise) + ". It's a draw..";
 }
+
+/* Switch statement to determine outcome of the game given the players and computers gameplay choise.
+If a match of gameplay choises if found in the first switch block a win is generated for the player.
+The second block generates a win for the computer and the third a draw.*/
 
 function game(playerChoise) {
     const computerChoise = getComputerChoise();
@@ -86,26 +96,28 @@ function game(playerChoise) {
     }
 }
 
+// Eventlistner section reaction to the calling of objects written in the global scope of the DOM cache to perform functions.
+
 function main() {
     rock_button.addEventListener('click', function() {
-        game("#ro")
-    })
+        game("#ro");
+    });
 
     paper_button.addEventListener('click', function() {
-        game("#pa")
-    })
+        game("#pa");
+    });
 
     scissors_button.addEventListener('click', function() {
-        game("#sc")
-    })
+        game("#sc");
+    });
 
     lizard_button.addEventListener('click', function() {
-        game("#li")
-    })
+        game("#li");
+    });
 
     spock_button.addEventListener('click', function() {
-        game("#sp")
-    })
+        game("#sp");
+    });
 }
 
 main();
